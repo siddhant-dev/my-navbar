@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+
+nav {
+    height: 8vh;
+    background: #121a30;
+    display: flex;
+    margin:0;
+  }
+
+  .brand{
+    margin-top: 1rem;   
+    color: white;
+    justify-content: flex-start;
+    font-size: 20px;
+    margin-left: 2rem;
+    cursor: pointer;
+    z-index: 5;     
+    font-family: Lato, sans-serif;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+    font-family: Lato, sans-serif;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    margin-top: 0px;        
+    cursor: pointer;
+  }
+
+
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .button{
+    background-color: rgb(211, 107, 142);
+}   
+
+.button:hover{
+    background-color: rgb(202, 36, 77);
+}
+  
+  @media screen and (max-width: 768px) {
+    .line {
+      width: 30px;
+      height: 3px;
+      background: white;
+      margin: 5px;
+      transition: ease 0.3s;
+    }
+    nav {
+      position: relative;
+    }
+  
+    .hamburger {
+      position: absolute;
+      cursor: pointer;
+      right: 5%;
+      top: 50%;
+      transform: translate(-5%, -50%);
+      z-index: 2;
+    }
+
+    
+  
+    .nav-links {
+      position: fixed;
+      background: #121a30;
+      margin-top: 2rem;
+      height: 100%;
+      width: 100%;
+      flex-direction: column;   
+      transform: translateX(100%);
+      opacity: .8   ;
+      padding: 0;
+      /* clip-path: circle(100px at 90% -10%);
+      -webkit-clip-path: circle(100px at 90% -10%); */
+      transition: all 1s ease-out;
+      pointer-events: none;
+    }
+    .nav-links.open {
+      /* clip-path: circle(1000px at 90% -10%);
+      -webkit-clip-path: circle(1000px at 90% -10%); */
+      transform: translateX(0);
+      pointer-events: all;
+    }
+    .landing {
+      flex-direction: column;
+    }
+   .no{
+      opacity: 0;
+    }
+    .nav-links li a {
+      font-size: 25px;
+    }
+    .nav-links li:nth-child(1) {
+      transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2) {
+      transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3) {
+      transition: all 0.5s ease 0.6s;
+    }
+    .nav-links li:nth-child(4) {
+        transition: all 0.5s ease 0.8s;
+      }
+    .fade {
+      opacity: 1;
+    }
+    .toggle1{
+      transform: rotate(-45deg) translate(-5px, 6px);
+      transition: ease 0.3s;
+    }
+
+    .toggle2 {
+      opacity: 0;
+    }
+
+    .toggle3{
+      transform: rotate(45deg) translate(-5px, -6px);
+      transition: ease 0.3s;
+    }
+
+
+  }   
